@@ -39,15 +39,15 @@
         }else if ((i=>5) && (buzz === 0) && (fizz !== 0)){
             console.log(i, "è BUZZ in quanto divisibile per 5");
 
-        }else if ((fizz === 0) && (buzz === 0)){
+        } else{
+        console.log (i);
+
+        }
+
+        if ((fizz === 0) && (buzz === 0)){
             console.log(i, "è FIZZBUZZ in quanto divisibile sia per 3 che per 5");
 
-        }else{
-            console.log (i);
-            
         }
-        
-
         
     }
 // Output
