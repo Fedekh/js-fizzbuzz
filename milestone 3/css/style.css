@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(129, 91, 41);
+    background-color: rgb(49, 62, 118);
 }
 
 .wrapper {
@@ -8,10 +8,39 @@ body {
     /* margin: 0 auto; */
 }
 
+.ms_container {
+    width: 70%;
+    margin: 0 auto;
+}
 
+.wrapper2 {
+    height: 100%;
+    
+}
+
+h1 {
+    font-size: 3rem;
+}
 
 .box {
-    border: 1px solid black;
-    width: calc(100% / 10);
-    aspect-ratio: 1/1;
+    background-color: rgb(162, 60, 171);
+    /* border: 1px solid black; */
+    width:calc(100% / 10 - 20px);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;   
+    justify-content: center;         
+}
+
+
+.fizz {
+    background-color: rgb(28, 194, 28);
+}
+
+.buzz {
+    background-color:  rgb(239, 71, 71);
+}
+
+.fizzbuzz{
+    background-color: rgb(81, 81, 243);
 }

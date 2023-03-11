@@ -30,7 +30,7 @@
 //     let buzz = i % 5;
 //     let fizzbuzz = i % (3 * 5); //penso abbia senso dichiarare in minimo comune multiplo tra loro e specificare il resto
 //     // console.log (fizz, buzz, fizzbuzz, typeof fizz, typeof buzz, typeof fizzbuzz)
-   
+
 //     if ((i=>3) && (fizz === 0) && (buzz !== 0)){
 //         console.log(i, "è FIZZ in quanto divisibile per 3");
 
@@ -42,11 +42,11 @@
 
 //     }else{
 //         console.log (i);
-        
-//     }
-    
 
-    
+//     }
+
+
+
 // }
 
 
@@ -58,73 +58,110 @@
 
 // input
 
-// const wrap = document.querySelector(".d-flex");
-// console.log(wrap, typeof wrap);
+// const wrap = document.querySelector(".wrapper2");
+// console.log(wrap);
 // let i;
 
-// LOGICA
+// // LOGICA
 
-// for (let i = 1; i<=100; i++) {
-//     let fizz = i % 3; 
+// for (let i = 1; i <= 100; i++) {
+//     let fizz = i % 3;
 //     let buzz = i % 5;
 //     let fizzbuzz = i % (3 * 5); //penso abbia senso dichiarare in minimo comune multiplo tra loro e specificare il resto
-//     // console.log (fizz, buzz, fizzbuzz, typeof fizz, typeof buzz, typeof fizzbuzz)
-   
-//     if ((i=>3) && (fizz === 0) && (buzz !== 0)){
+//     let content = i;
+
+//     if ((i >= 3) && (fizz === 0) && (buzz !== 0)) {
 //         console.log(i, "è FIZZ in quanto divisibile per 3");
+//         content = "fizz";
 
-//     }else if ((i=>5) && (buzz === 0) && (fizz !== 0)){
+              
+
+//     } else if ((i >= 5) && (buzz === 0) && (fizz !== 0)) {
 //         console.log(i, "è BUZZ in quanto divisibile per 5");
+//         content = "buzz";
 
-//     }else if ((fizz === 0) && (buzz === 0)){
-//         console.log(i, "è FIZZBUZZ in quanto divisibile sia per 3 che per 5");
-
-//     }else{
-//         console.log (i);
         
+
+//     } else if ((fizz === 0) && (buzz === 0)) {
+//         console.log(i, "è FIZZBUZZ in quanto divisibile sia per 3 che per 5");
+//         content = "fizzbuzz";
+        
+
+//     } else {
+//         console.log(i);
+
 //     }
     
-//     // OUTPUT
+    // OUTPUT
+    // wrap.innerHTML += `<div class="box">${i}</div>`;
+    // wrap.innerHTML += `<div class="box">${content}</div>`;
+     // ho notato che usando solo i, chiaramente si rompe il tutto perche i a sua volta incrementa di 1 SEMPRE
+    // mentre  ( riga 71 i=content) fa si che solo in quei specifici casi IF i(o content) serve per sovrascrivere
+    // nell'html l'elemente opportuno    
     
-//     wrap.innerHTML += `<div class="box">${i}</div>`
     
 // }
 
 
-// #######################################################################################
+// ###########################################################################################################
 
 // MILESTONE 3
 
 // input
 
-const wrap = document.querySelector(".d-flex");
-console.log(wrap, typeof wrap);
+const wrap = document.querySelector(".wrapper2");
+console.log(wrap);
 let i;
+
 
 // LOGICA
 
-for (let i = 1; i<=100; i++) {
-    let fizz = i % 3; 
+for (let i = 1; i <= 100; i++) {
+    let fizz = i % 3;
     let buzz = i % 5;
     let fizzbuzz = i % (3 * 5); //penso abbia senso dichiarare in minimo comune multiplo tra loro e specificare il resto
-    // console.log (fizz, buzz, fizzbuzz, typeof fizz, typeof buzz, typeof fizzbuzz)
-   
-    if ((i=>3) && (fizz === 0) && (buzz !== 0)){
+    let content = i;
+    let classColor;  //mi servirà per manipolare/aggiungere classe a chi di dovere , avviene a riga 160
+
+    //userò il trick di dare un nome classe in css uguale al valore stringa della variabile in js (content)
+    // cosi da facilitare e rendere piu comprensibile il codice
+    
+    if ((i >= 3) && (fizz === 0) && (buzz !== 0)) {
         console.log(i, "è FIZZ in quanto divisibile per 3");
+        content = "fizz";
+        classColor = content; 
+              
 
-    }else if ((i=>5) && (buzz === 0) && (fizz !== 0)){
+    } else if ((i >= 5) && (buzz === 0) && (fizz !== 0)) {
         console.log(i, "è BUZZ in quanto divisibile per 5");
+        content = "buzz";
+        classColor = content;
 
-    }else if ((fizz === 0) && (buzz === 0)){
-        console.log(i, "è FIZZBUZZ in quanto divisibile sia per 3 che per 5");
+        // wrap.innerHTML += `<div class="box buzz"></div>`;
 
-    }else{
-        console.log (i);
+
         
+
+    } else if ((fizz === 0) && (buzz === 0)) {
+        console.log(i, "è FIZZBUZZ in quanto divisibile sia per 3 che per 5");
+        content = "fizzbuzz";
+        classColor = content;
+
+        // wrap.innerHTML += `<div class="box fizzbuzz">${content}</div>`;
+
+        
+
+    } else {
+        console.log(i);
+
     }
     
     // OUTPUT
-    
-    wrap.innerHTML += `<div class="box">${i}</div>`
+    wrap.innerHTML += `<div class="box ${classColor}">${i}</div>`;
+    // wrap.innerHTML += `<div class="box">${i}</div>`;
+    // ho notato che usando solo i, chiaramente si rompe il tutto perche i a sua volta incrementa di 1 SEMPRE
+    // mentre  ( riga 71 i=content) fa si che solo in quei specifici casi IF i(o content)sia il valorenecessario
+    //  per sovrascrivere nell'html l'elemento opportuno    
+
     
 }
