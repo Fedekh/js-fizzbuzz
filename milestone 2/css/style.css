@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(129, 91, 41);
+    background-color: rgb(77, 55, 26);
 }
 
 .wrapper {
@@ -8,10 +8,24 @@ body {
     /* margin: 0 auto; */
 }
 
+.ms_container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.wrapper2 {
+    height: 100%;
+    
+}
+
 
 
 .box {
     border: 1px solid black;
-    width: calc(100% / 10);
-    aspect-ratio: 1/1;
+    height:calc(100% / 10 - 20px);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;   
+    justify-content: center;         
 }
+

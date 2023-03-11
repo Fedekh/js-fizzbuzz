@@ -24,30 +24,107 @@
 
 // Input
 
+// LOGICA
+// for (let i = 1; i<=100; i++) {
+//     let fizz = i % 3; 
+//     let buzz = i % 5;
+//     let fizzbuzz = i % (3 * 5); //penso abbia senso dichiarare in minimo comune multiplo tra loro e specificare il resto
+//     // console.log (fizz, buzz, fizzbuzz, typeof fizz, typeof buzz, typeof fizzbuzz)
+   
+//     if ((i=>3) && (fizz === 0) && (buzz !== 0)){
+//         console.log(i, "è FIZZ in quanto divisibile per 3");
+
+//     }else if ((i=>5) && (buzz === 0) && (fizz !== 0)){
+//         console.log(i, "è BUZZ in quanto divisibile per 5");
+
+//     }else if ((fizz === 0) && (buzz === 0)){
+//         console.log(i, "è FIZZBUZZ in quanto divisibile sia per 3 che per 5");
+
+//     }else{
+//         console.log (i);
         
+//     }
+    
 
-// Logica
-    for (let i = 1; i<=100; i++) {
-        let fizz = i % 3; 
-        let buzz = i % 5;
-        let fizzbuzz = i % (3 * 5); //penso abbia senso dichiarare in minimo comune multiplo tra loro e specificare il resto
-        // console.log (fizz, buzz, fizzbuzz, typeof fizz, typeof buzz, typeof fizzbuzz)
-       
-        if ((i=>3) && (fizz === 0) && (buzz !== 0)){
-            console.log(i, "è FIZZ in quanto divisibile per 3");
+    
+// }
 
-        }else if ((i=>5) && (buzz === 0) && (fizz !== 0)){
-            console.log(i, "è BUZZ in quanto divisibile per 5");
 
-        } else{
+// Output
+
+// #####################################################################################
+
+// MILESTONE 2
+
+// input
+
+// const wrap = document.querySelector(".d-flex");
+// console.log(wrap, typeof wrap);
+// let i;
+
+// LOGICA
+
+// for (let i = 1; i<=100; i++) {
+//     let fizz = i % 3; 
+//     let buzz = i % 5;
+//     let fizzbuzz = i % (3 * 5); //penso abbia senso dichiarare in minimo comune multiplo tra loro e specificare il resto
+//     // console.log (fizz, buzz, fizzbuzz, typeof fizz, typeof buzz, typeof fizzbuzz)
+   
+//     if ((i=>3) && (fizz === 0) && (buzz !== 0)){
+//         console.log(i, "è FIZZ in quanto divisibile per 3");
+
+//     }else if ((i=>5) && (buzz === 0) && (fizz !== 0)){
+//         console.log(i, "è BUZZ in quanto divisibile per 5");
+
+//     }else if ((fizz === 0) && (buzz === 0)){
+//         console.log(i, "è FIZZBUZZ in quanto divisibile sia per 3 che per 5");
+
+//     }else{
+//         console.log (i);
+        
+//     }
+    
+//     // OUTPUT
+    
+//     wrap.innerHTML += `<div class="box">${i}</div>`
+    
+// }
+
+
+// #######################################################################################
+
+// MILESTONE 3
+
+// input
+
+const wrap = document.querySelector(".d-flex");
+console.log(wrap, typeof wrap);
+let i;
+
+// LOGICA
+
+for (let i = 1; i<=100; i++) {
+    let fizz = i % 3; 
+    let buzz = i % 5;
+    let fizzbuzz = i % (3 * 5); //penso abbia senso dichiarare in minimo comune multiplo tra loro e specificare il resto
+    // console.log (fizz, buzz, fizzbuzz, typeof fizz, typeof buzz, typeof fizzbuzz)
+   
+    if ((i=>3) && (fizz === 0) && (buzz !== 0)){
+        console.log(i, "è FIZZ in quanto divisibile per 3");
+
+    }else if ((i=>5) && (buzz === 0) && (fizz !== 0)){
+        console.log(i, "è BUZZ in quanto divisibile per 5");
+
+    }else if ((fizz === 0) && (buzz === 0)){
+        console.log(i, "è FIZZBUZZ in quanto divisibile sia per 3 che per 5");
+
+    }else{
         console.log (i);
-
-        }
-
-        if ((fizz === 0) && (buzz === 0)){
-            console.log(i, "è FIZZBUZZ in quanto divisibile sia per 3 che per 5");
-
-        }
         
     }
-// Output
+    
+    // OUTPUT
+    
+    wrap.innerHTML += `<div class="box">${i}</div>`
+    
+}
