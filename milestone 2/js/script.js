@@ -68,7 +68,7 @@ for (let i = 1; i <= 100; i++) {
     let fizz = i % 3;
     let buzz = i % 5;
     let fizzbuzz = i % (3 * 5); //penso abbia senso dichiarare in minimo comune multiplo tra loro e specificare il resto
-    let content = i;
+    let content = i;    //verrà usata poi a riga 96 per "automatizzare l'output"
 
     if ((i >= 3) && (fizz === 0) && (buzz !== 0)) {
         console.log(i, "è FIZZ in quanto divisibile per 3");
@@ -93,10 +93,10 @@ for (let i = 1; i <= 100; i++) {
     }
     
     // OUTPUT
-    // wrap.innerHTML += `<div class="box">${i}</div>`;
     wrap.innerHTML += `<div class="box">${content}</div>`;
+    // wrap.innerHTML += `<div class="box">${i}</div>`;
      // ho notato che usando solo i, chiaramente si rompe il tutto perche i a sua volta incrementa di 1 SEMPRE
-    // mentre  ( riga 71 i=content) fa si che solo in quei specifici casi IF i(o content) serve per sovrascrivere
+    // mentre  ( riga 71 i=content) fa si che solo in quei specifici casi IF i(o content) mi sovrascrivere
     // nell'html l'elemente opportuno    
     
     
